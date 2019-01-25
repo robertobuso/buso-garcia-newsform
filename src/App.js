@@ -4,15 +4,22 @@ import CallToAction from './Components/CallToAction.js'
 
 class App extends Component {
 
+  state = {
+      email: '',
+      fullName: ''
+    }
+
   handleNextClick = (value) => {
-    console.log(value)
+    this.setState({ email: value})
   }
 
   render() {
     return (
       <div className='footer'>
         <div className='rectangle'>
-            <CallToAction handleNextClick={this.handleNextClick}/>
+            <CallToAction handleNextClick={this.handleNextClick}
+            email={this.state.email}
+            fullName={this.state.fullName}/>
         </div>
       </div>
     );

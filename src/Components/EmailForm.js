@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Message } from 'semantic-ui-react'
 
-class SignUpForm extends Component {
+class EmailForm extends Component {
 
   state = {
     emailInput: '',
@@ -20,7 +20,7 @@ class SignUpForm extends Component {
     if (validEmail) {
       event.preventDefault()
       event.target.reset()
-      
+
       this.setState( { error: false}, () => this.props.handleNextClick( this.state.emailInput))
     } else {
       this.setState( { error: true} )
@@ -30,37 +30,36 @@ class SignUpForm extends Component {
   render() {
     return (
       <>
-      <div className='error-position'>
+        <div className='error-position'>
           {this.state.error === true ?
             <Message
               error
               header='Invalid Email'
               content='Please check your email and try again.'
             /> : null }
-            </div>
-      <div className='form-position'>
-      <Form error
-      onSubmit={(event, value) =>  this.handleSubmit(event, this.state.emailInput)}
-    >
-      <header className='form-header'>
-      SIGN UP FOR THE TLC NEWSLETTER.
-      </header>
-      <Form.Field
-        className='email-input email-text'
-         required name='email'
-         placeholder='enter email address'
-         control='input'
-         type='text'
-         onChange={event => this.handleChange(event)}/>
-      <Form.Button className='next-button' color='red' size='huge'
-      >
-      NEXT
-      </Form.Button>
-      </Form>
-    </div>
-</>
+          </div>
+        <div className='form-position'>
+          <Form error
+          onSubmit={(event, value) =>  this.handleSubmit(event, this.state.emailInput)}
+          >
+            <header className='form-header'>
+              SIGN UP FOR THE TLC NEWSLETTER.
+            </header>
+            <Form.Field
+              className='email-input email-text'
+              required name='email'
+              placeholder='enter email address'
+              control='input'
+              type='text'
+              onChange={event => this.handleChange(event)}/>
+            <Form.Button className='next-button' color='red' size='huge'>
+              NEXT
+            </Form.Button>
+          </Form>
+        </div>
+      </>
     )
   }
 }
 
-export default SignUpForm;
+export default EmailForm;

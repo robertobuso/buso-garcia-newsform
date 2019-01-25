@@ -1,5 +1,6 @@
 import React from 'react';
-import SignUpForm from '../Components/SignUpForm.js'
+import EmailForm from '../Components/EmailForm.js'
+import FullNameForm from '../Components/FullNameForm.js'
 
 const CallToAction = props => {
   return (
@@ -7,8 +8,17 @@ const CallToAction = props => {
     <div className='call-to-action'>
     Join {<br/>}the list
     </div>
-    <SignUpForm handleNextClick={props.handleNextClick }/>
+    {props.email === '' ?
+    <EmailForm handleNextClick={props.handleNextClick }
+    email={props.email}
+    fullName={props.fullName}/>
+    :
+    <FullNameForm handleNextClick={props.handleNextClick }
+    email={props.email}
+    fullName={props.fullName}/>
+    }
     </>
+
   )
 }
 

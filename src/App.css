@@ -49,7 +49,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: 30px;
-  font-size: 24px;
+  font-size: 22px;
   color: #94AEBF;
 }
 
@@ -90,4 +90,23 @@
   right: 17.78%;
   top: 170%;
   bottom: 32.63%;
+}
+
+.full-name-input {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 150%;
+  bottom: 33%;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  border-radius: 5px;
+}
+
+.full-name-button {
+  position: absolute;
+  left: 100%;
+  right: 10%;
+  top: 50%;
+  bottom: 50%;
 }
