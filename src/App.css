@@ -29,12 +29,15 @@
   color: #B6FDBF;
 }
 
-.form-header {
+.form-position {
   position: absolute;
   left: 37.01%;
   right: 13.26%;
   top: 32.3%;
   bottom: 63.68%;
+}
+
+.form-header {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -53,9 +56,9 @@
 
 .email-input {
   position: absolute;
-  left: 37.15%;
+  left: 0%;
   right: 37%;
-  top: 50%;
+  top: 150%;
   bottom: 33%;
   background: #FFFFFF;
   mix-blend-mode: normal;
@@ -70,15 +73,14 @@
   font-weight: normal;
   line-height: 32px;
   font-size: 24px;
-  color: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.5;
 }
 
 .next-button {
   position: absolute;
-  left: 60.88%;
+  left: 66%;
   right: 17.78%;
-  top: 50.66%;
+  top: 170%;
   bottom: 32.63%;
 }
