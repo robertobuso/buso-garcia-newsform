@@ -4,9 +4,7 @@ import CallToAction from './Components/CallToAction.js'
 
 class App extends Component {
 
-  handleNextClick = (event, value) => {
-    event.preventDefault()
-    event.target.reset()
+  handleNextClick = (value) => {
     console.log(value)
   }
 

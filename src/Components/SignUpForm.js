@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Form } from 'semantic-ui-react'
+import { Form, Message } from 'semantic-ui-react'
 
 class SignUpForm extends Component {
 
   state = {
-    emailInput: ''
+    emailInput: '',
+    error: false
   }
 
   handleChange = (e) => {
@@ -13,10 +14,33 @@ class SignUpForm extends Component {
     })
   }
 
+  handleSubmit = (event, value) => {
+    const validEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+
+    if (validEmail) {
+      event.preventDefault()
+      event.target.reset()
+      
+      this.setState( { error: false}, () => this.props.handleNextClick( this.state.emailInput))
+    } else {
+      this.setState( { error: true} )
+    }
+  }
+
   render() {
     return (
+      <>
+      <div className='error-position'>
+          {this.state.error === true ?
+            <Message
+              error
+              header='Invalid Email'
+              content='Please check your email and try again.'
+            /> : null }
+            </div>
       <div className='form-position'>
-      <Form onSubmit={(e, value) =>  this.props.handleNextClick(e, this.state.emailInput)}
+      <Form error
+      onSubmit={(event, value) =>  this.handleSubmit(event, this.state.emailInput)}
     >
       <header className='form-header'>
       SIGN UP FOR THE TLC NEWSLETTER.
@@ -26,7 +50,7 @@ class SignUpForm extends Component {
          required name='email'
          placeholder='enter email address'
          control='input'
-         type='password'
+         type='text'
          onChange={event => this.handleChange(event)}/>
       <Form.Button className='next-button' color='red' size='huge'
       >
@@ -34,6 +58,7 @@ class SignUpForm extends Component {
       </Form.Button>
       </Form>
     </div>
+</>
     )
   }
 }

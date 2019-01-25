@@ -29,6 +29,13 @@
   color: #B6FDBF;
 }
 
+.error-position {
+  position: absolute;
+  left: 37.01%;
+  right: 32%;
+  top: 1%;
+}
+
 .form-position {
   position: absolute;
   left: 37.01%;
