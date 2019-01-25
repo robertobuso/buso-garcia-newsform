@@ -15,6 +15,14 @@
   background: #120F23;
 }
 
+.third-div {
+  position: absolute;
+  left: 13.26%;
+  right: 13.26%;
+  top: 32.3%;
+  bottom: 30.13%;
+}
+
 .call-to-action {
   position: absolute;
   left: 13.26%;
@@ -24,7 +32,61 @@
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  line-height: 125px;
+  line-height: 131px;
   font-size: 80px;
   color: #B6FDBF;
+}
+
+.form-header {
+  position: absolute;
+  left: 37.01%;
+  right: 13.26%;
+  top: 32.3%;
+  bottom: 63.68%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 24px;
+  color: #94AEBF;
+}
+
+.group-13 {
+  position: absolute;
+left: 37.15%;
+right: 62.01%;
+top: 46.31%;
+bottom: 52.08%;
+}
+
+.email-input {
+  position: absolute;
+  left: 37.15%;
+  right: 29.51%;
+  top: 39.06%;
+  bottom: 54.9%;
+
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  border-radius: 5px;
+}
+
+.email-text {
+  position: absolute;
+  left: 38.89%;
+  right: 42.29%;
+  top: 40.21%;
+  bottom: 55.49%;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 32px;
+  font-size: 24px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.4;
 }
