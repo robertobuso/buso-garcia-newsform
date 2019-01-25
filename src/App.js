@@ -10,10 +10,8 @@ class App extends Component {
     return (
       <div className='footer'>
         <div className='rectangle'>
-
             <CallToAction />
             <SignUpForm />
-
         </div>
       </div>
     );

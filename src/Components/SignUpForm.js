@@ -1,17 +1,19 @@
 import React from 'react';
+import { Button } from 'semantic-ui-react'
 
 const SignUpForm = props => {
 
   return (
     <>
     <form>
-    <header className='form-header'>
+    <div className='form-header'>
     SIGN UP FOR THE TLC NEWSLETTER.
-    </header>
+    </div>
     <input className='email-input email-text'
     name='email' />
+    <Button className='next-button' color='red' size='large'>NEXT</Button>
   </form>
-</>
+  </>
   )
 }
 

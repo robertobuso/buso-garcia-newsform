@@ -15,14 +15,6 @@
   background: #120F23;
 }
 
-.third-div {
-  position: absolute;
-  left: 13.26%;
-  right: 13.26%;
-  top: 32.3%;
-  bottom: 30.13%;
-}
-
 .call-to-action {
   position: absolute;
   left: 13.26%;
@@ -53,19 +45,18 @@
 
 .group-13 {
   position: absolute;
-left: 37.15%;
-right: 62.01%;
-top: 46.31%;
-bottom: 52.08%;
+  left: 37.15%;
+  right: 62.01%;
+  top: 46.31%;
+  bottom: 52.08%;
 }
 
 .email-input {
   position: absolute;
   left: 37.15%;
-  right: 29.51%;
-  top: 39.06%;
-  bottom: 54.9%;
-
+  right: 37%;
+  top: 50%;
+  bottom: 33%;
   background: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.1;
@@ -74,19 +65,20 @@ bottom: 52.08%;
 
 .email-text {
   position: absolute;
-  left: 38.89%;
-  right: 42.29%;
-  top: 40.21%;
-  bottom: 55.49%;
-
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   line-height: 32px;
   font-size: 24px;
-
   color: #FFFFFF;
-
   mix-blend-mode: normal;
-  opacity: 0.4;
+  opacity: 0.5;
+}
+
+.next-button {
+  position: absolute;
+  left: 60.88%;
+  right: 17.78%;
+  top: 50.66%;
+  bottom: 32.63%;
 }
