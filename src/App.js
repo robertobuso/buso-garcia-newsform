@@ -13,11 +13,16 @@ class App extends Component {
     this.setState({ email: value})
   }
 
+  handleSubmitClick = (name) => {
+    this.setState({ fullName: name}, () => console.log('FROM THE STATE: ', this.state.fullName))
+  }
+
   render() {
     return (
       <div className='footer'>
         <div className='rectangle'>
             <CallToAction handleNextClick={this.handleNextClick}
+            handleSubmitClick={this.handleSubmitClick}
             email={this.state.email}
             fullName={this.state.fullName}/>
         </div>

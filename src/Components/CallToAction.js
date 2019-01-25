@@ -13,7 +13,7 @@ const CallToAction = props => {
     email={props.email}
     fullName={props.fullName}/>
     :
-    <FullNameForm handleNextClick={props.handleNextClick }
+    <FullNameForm handleSubmitClick={props.handleSubmitClick }
     email={props.email}
     fullName={props.fullName}/>
     }

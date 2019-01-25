@@ -4,27 +4,33 @@ import { Form, Message } from 'semantic-ui-react'
 class FullNameForm extends Component {
 
   state = {
-    emailInput: '',
+    firstName: '',
+    lastName: '',
     error: false
   }
 
-  handleChange = (e) => {
+  handleFirstNameChange = (e) => {
     this.setState( {
-      emailInput: e.currentTarget.value
+      firstName: e.currentTarget.value
     })
   }
 
-  handleSubmit = (event, value) => {
-    const validEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+  handleSecondNameChange = (e) => {
+    this.setState( {
+      secondName: e.currentTarget.value
+    })
+  }
 
-    if (validEmail) {
+  handleSubmit = (event, firstName, secondName) => {
+    if (firstName !== '' && secondName !== '') {
       event.preventDefault()
       event.target.reset()
 
-      this.setState( { error: false}, () => this.props.handleNextClick( this.state.emailInput))
+      this.setState( { error: false}, () => this.props.handleSubmitClick(firstName + ' ' + secondName))
     } else {
       this.setState( { error: true} )
     }
+
   }
 
   render() {
@@ -40,24 +46,24 @@ class FullNameForm extends Component {
         </div>
       <div className='form-position'>
         <Form error
-        onSubmit={(event, value) =>  this.handleSubmit(event, this.state.emailInput)}
+        onSubmit={(event, value) =>  this.handleSubmit(event, this.state.firstName, this.state.secondName)}
         >
           <header className='form-header'>
             ALMOST DONE! PLEASE ENTER YOUR FIRST AND LAST NAME.
           </header>
           <Form.Group widths='equal' className='full-name-input email-text'>
-          <Form.Input fluid
+          <Form.Input
             required name='first name'
             placeholder='First Name'
             control='input'
             type='text'
-            onChange={event => this.handleChange(event)}/>
-            <Form.Input fluid
+            onChange={event => this.handleFirstNameChange(event)}/>
+            <Form.Input
               required name='last name'
               placeholder='Last Name'
               control='input'
               type='text'
-              onChange={event => this.handleChange(event)}/>
+              onChange={event => this.handleSecondNameChange(event)}/>
           <Form.Button color='red' size='huge' className='full-name-button'>
             SIGN UP
           </Form.Button>
