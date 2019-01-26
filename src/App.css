@@ -47,7 +47,7 @@
 .form-header {
   font-family: Open Sans;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   font-size: 1.75vw;
   color: #94AEBF;
@@ -107,4 +107,12 @@
   left: 82%;
   top: 185%;
   bottom: 45%;
+}
+
+.congratulations-body-text {
+    font-family: Open Sans;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 1.75vw;
+    color: #94AEBF;
 }

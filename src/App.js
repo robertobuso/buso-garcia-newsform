@@ -6,7 +6,8 @@ class App extends Component {
 
   state = {
       email: '',
-      fullName: ''
+      fullName: '',
+      completeForm: false
     }
 
   handleNextClick = (value) => {
@@ -14,7 +15,9 @@ class App extends Component {
   }
 
   handleSubmitClick = (name) => {
-    this.setState({ fullName: name}, () => console.log('FROM THE STATE: ', this.state.fullName))
+    this.setState({
+          fullName: name,
+          completeForm: true}, () => console.log('The valid full name is: ', this.state.fullName))
   }
 
   render() {
@@ -24,7 +27,8 @@ class App extends Component {
             <CallToAction handleNextClick={this.handleNextClick}
             handleSubmitClick={this.handleSubmitClick}
             email={this.state.email}
-            fullName={this.state.fullName}/>
+            fullName={this.state.fullName}
+            completeForm={this.state.completeForm}/>
         </div>
       </div>
     );
