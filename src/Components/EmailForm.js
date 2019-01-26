@@ -34,8 +34,8 @@ class EmailForm extends Component {
           {this.state.error === true ?
             <Message
               error
-              header='Invalid Email'
-              content='Please check your email and try again.'
+              header='Email is Not Valid'
+              content={window.screen.width > 415 ? 'Please check your email and try again.' : null}
             /> : null }
           </div>
         <div className='form-position'>
@@ -52,7 +52,7 @@ class EmailForm extends Component {
               control='input'
               type='text'
               onChange={event => this.handleChange(event)}/>
-            <Form.Button className='next-button' color='red' size='huge'>
+            <Form.Button className='next-button' color='red' size={window.screen.width > 415 ? 'large' : 'mini'}>
               NEXT
             </Form.Button>
           </Form>

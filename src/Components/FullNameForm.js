@@ -36,12 +36,12 @@ class FullNameForm extends Component {
   render() {
     return (
       <>
-        <div className='error-position'>
+        <div className='full-name-error-position'>
         {this.state.error === true ?
           <Message
             error
-            header='Incomplete'
-            content='Please enter a first name and a last name.'
+            header='Name is Incomplete'
+            content={window.screen.width > 415 ? 'Please enter a first name and a last name.' : null}
           /> : null }
         </div>
       <div className='form-position'>
@@ -65,7 +65,7 @@ class FullNameForm extends Component {
               type='text'
               onChange={event => this.handleSecondNameChange(event)}/>
           </Form.Group>
-          <Form.Button size='large' color='red' className='full-name-button'>
+          <Form.Button size={window.screen.width > 415 ? 'large' : 'tiny'} color='red' className='full-name-button'>
             SIGN UP
           </Form.Button>
         </Form>

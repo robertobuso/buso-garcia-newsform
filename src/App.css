@@ -1,3 +1,4 @@
+/* Desktop */
 .footer {
   position: absolute;
   left: -0.21%;
@@ -128,4 +129,144 @@
     line-height: 30px;
     font-size: 1.75vw;
     color: #94AEBF;
+}
+
+/* Mobile */
+@media only screen and (max-width: 415px) {
+  .footer {
+    position: absolute;
+    left: -0.21%;
+    right: -0.14%;
+    top: 26.85%;
+    bottom: 1%;
+  }
+
+  .rectangle {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 26.85%;
+    bottom: 24.7%;
+    background: #120F23;
+  }
+
+  .call-to-action {
+    position: absolute;
+    left: 13.26%;
+    right: 50%;
+    top: 0%;
+    bottom: 30.13%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 5vw;
+    color: #B6FDBF;
+  }
+
+  .call-to-action-final {
+    position: absolute;
+    left: 9%;
+    top: 15%;
+    bottom: 30.13%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 90px;
+    font-size: 5vw;
+    color: #B6FDBF;
+  }
+
+  .error-position {
+    position: absolute;
+    left: 0%;
+    right: 1%;
+    top: 49%;
+  }
+
+  .form-position {
+    position: absolute;
+    left: 37.01%;
+    right: 13.26%;
+    top: 5%;
+    bottom: 63.68%;
+  }
+
+  .form-header {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 3vw;
+    color: #94AEBF;
+  }
+
+  .group-13 {
+    position: absolute;
+    left: 50.15%;
+    right: 62.01%;
+    top: 46.31%;
+    bottom: 52.08%;
+  }
+
+  .email-input {
+    position: absolute;
+    left: 0%;
+    right: 37%;
+    top: 150%;
+    bottom: 33%;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    border-radius: 5px;
+  }
+
+  .email-text {
+    position: absolute;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 3vw;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .next-button {
+    position: absolute;
+    left: 5%;
+    right: 17.78%;
+    top: 380%;
+  }
+
+  .full-name-input {
+    position: absolute;
+    left: 0%;
+    right: 20%;
+    top: 150%;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    border-radius: 5px;
+  }
+
+  .full-name-button {
+    position: absolute;
+    left: 6%;
+    top: 365%;
+  }
+
+  .congratulations-body-text {
+      font-family: Open Sans;
+      font-style: normal;
+      line-height: 30px;
+      font-size: 1.75vw;
+      color: #94AEBF;
+  }
+
+  .full-name-error-position {
+      position: absolute;
+      left: 0%;
+      right: 1%;
+      top: 70%;
+    }
 }
