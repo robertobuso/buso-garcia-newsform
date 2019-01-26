@@ -9,15 +9,15 @@ class FullNameForm extends Component {
     error: false
   }
 
-  handleFirstNameChange = (e) => {
+  handleFirstNameChange = (event) => {
     this.setState( {
-      firstName: e.currentTarget.value
+      firstName: event.currentTarget.value
     })
   }
 
-  handleSecondNameChange = (e) => {
+  handleSecondNameChange = (event) => {
     this.setState( {
-      secondName: e.currentTarget.value
+      secondName: event.currentTarget.value
     })
   }
 
@@ -25,12 +25,10 @@ class FullNameForm extends Component {
     if (firstName !== undefined && secondName !== undefined && firstName !== '' && secondName !== '') {
       event.preventDefault()
       event.target.reset()
-
       this.setState( { error: false}, () => this.props.handleSubmitClick(firstName + ' ' + secondName))
     } else {
       this.setState( { error: true} )
     }
-
   }
 
   render() {
@@ -42,33 +40,41 @@ class FullNameForm extends Component {
             error
             header='Name is Incomplete'
             content={window.screen.width > 415 ? 'Please enter a first name and a last name.' : null}
-          /> : null }
+          />
+        : null}
         </div>
-      <div className='form-position'>
-        <Form error
-        onSubmit={(event, value) =>  this.handleSubmit(event, this.state.firstName, this.state.secondName)}
-        >
-          <header className='form-header'>
-            ALMOST DONE! PLEASE ENTER YOUR FIRST AND LAST NAME.
-          </header>
-          <Form.Group widths='equal' className='full-name-input email-text'>
-          <Form.Input
-            name='first name'
-            placeholder='First Name'
-            control='input'
-            type='text'
-            onChange={event => this.handleFirstNameChange(event)}/>
-            <Form.Input
-              name='last name'
-              placeholder='Last Name'
-              control='input'
-              type='text'
-              onChange={event => this.handleSecondNameChange(event)}/>
-          </Form.Group>
-          <Form.Button size={window.screen.width > 415 ? 'large' : 'tiny'} color='red' className='full-name-button'>
-            SIGN UP
-          </Form.Button>
-        </Form>
+
+        <div className='form-position'>
+          <Form error
+            onSubmit={(event, value) =>  this.handleSubmit(event, this.state.firstName, this.state.secondName)}>
+
+            <header className='form-header'>
+              ALMOST DONE! PLEASE ENTER YOUR FIRST AND LAST NAME.
+            </header>
+
+            <Form.Group widths='equal' className='full-name-input email-text'>
+              <Form.Input
+                name='first name'
+                placeholder='First Name'
+                control='input'
+                type='text'
+                onChange={event => this.handleFirstNameChange(event)}/>
+
+              <Form.Input
+                name='last name'
+                placeholder='Last Name'
+                control='input'
+                type='text'
+                onChange={event => this.handleSecondNameChange(event)}/>
+            </Form.Group>
+
+            <Form.Button
+              size={window.screen.width > 415 ? 'large' : 'tiny'}
+              color='red'
+              className='full-name-button'>
+                SIGN UP
+            </Form.Button>
+          </Form>
         </div>
       </>
     )

@@ -10,23 +10,27 @@ class App extends Component {
     }
 
   handleNextClick = (value) => {
-    this.setState({ email: value}, () => console.log('The valid email is: ', this.state.email))
+    this.setState({ email: value}, () => console.log('The valid email is:', this.state.email))
   }
 
   handleSubmitClick = (name) => {
     this.setState({
           fullName: name,
-          completeForm: true}, () => console.log('The valid full name is: ', this.state.fullName))
+          completeForm: true},
+          () => console.log('The valid full name is:', this.state.fullName)
+    )
   }
 
   render() {
     return (
       <div className='footer'>
         <div className='rectangle'>
-            <CallToAction handleNextClick={this.handleNextClick}
-            handleSubmitClick={this.handleSubmitClick}
-            email={this.state.email}
-            completeForm={this.state.completeForm}/>
+            <CallToAction
+              handleNextClick={this.handleNextClick}
+              handleSubmitClick={this.handleSubmitClick}
+              email={this.state.email}
+              completeForm={this.state.completeForm}
+            />
         </div>
       </div>
     );

@@ -8,31 +8,32 @@ const CallToAction = props => {
     <>
     {props.completeForm === true ?
         window.screen.width > 415 ?
-      <div className='call-to-action-final'>
-      congratula{<br/>}tions!
-      </div>
-      :
-      <div className='call-to-action-final'>
-      congratulations!
-      </div>
-      :
-      <div className='call-to-action'>
-      Join {<br/>}the list
-      </div>
+          <div className='call-to-action-final'>
+            congratula{<br/>}tions!
+          </div>
+          :
+          <div className='call-to-action-final'>
+            congratulations!
+          </div>
+          :
+          <div className='call-to-action'>
+            Join {<br/>}the list
+          </div>
     }
 
     {props.email === '' ?
-    <EmailForm handleNextClick={props.handleNextClick }
-    email={props.email} />
-    :
-    props.completeForm === false ?
-    <FullNameForm handleSubmitClick={props.handleSubmitClick }
-    email={props.email} />
-    :
-    <Congratulations />
+      <EmailForm
+        handleNextClick={props.handleNextClick }
+        email={props.email} />
+      :
+      props.completeForm === false ?
+        <FullNameForm
+          handleSubmitClick={props.handleSubmitClick }
+          email={props.email} />
+      :
+        <Congratulations />
     }
     </>
-
   )
 }
 

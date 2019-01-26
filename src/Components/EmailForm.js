@@ -9,20 +9,18 @@ class EmailForm extends Component {
     disclaimer: false
   }
 
-  handleChange = (e) => {
-    this.setState( {
-      emailInput: e.currentTarget.value
-    })
+  handleChange = (event) => {
+    this.setState( { emailInput: event.currentTarget.value }
+    )
   }
 
   handleCheckbox = () => {
-    this.setState( {
-      disclaimer: !this.state.disclaimer
-    }, () => console.log(this.state.disclaimer))
+    this.setState( { disclaimer: !this.state.disclaimer }
+    )
   }
 
   handleSubmit = (event, value) => {
-//Uses Regx to validate email by character and structure
+//Uses regex to validate email by character and structure
     const validEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
 
 //In case checkbox is required
@@ -34,7 +32,6 @@ class EmailForm extends Component {
     if (validEmail) {
       event.preventDefault()
       event.target.reset()
-
       this.setState( { error: false}, () => this.props.handleNextClick( this.state.emailInput))
     } else {
       this.setState( { error: true} )
@@ -50,15 +47,20 @@ class EmailForm extends Component {
               error
               header='Email is Not Valid'
               content={window.screen.width > 415 ? 'Please check your email and try again.' : null}
-            /> : null }
-          </div>
+            />
+            : null
+          }
+        </div>
+
         <div className='form-position'>
-          <Form error
-          onSubmit={(event, value) =>  this.handleSubmit(event, this.state.emailInput)}
-          >
+          <Form
+            error
+            onSubmit={(event, value) => this.handleSubmit(event, this.state.emailInput)}>
+
             <header className='form-header'>
               SIGN UP FOR THE TLC NEWSLETTER.
             </header>
+
             <Form.Field
               className='email-input email-text'
               required name='email'
@@ -66,20 +68,26 @@ class EmailForm extends Component {
               control='input'
               type='text'
               onChange={event => this.handleChange(event)}/>
-            <Form.Button fluid className='next-button' color='red' size={window.screen.width > 415 ? 'large' : 'mini'}>
-              NEXT
+
+            <Form.Button
+              fluid
+              className='next-button'
+              color='red'
+              size={window.screen.width > 415 ? 'large' : 'mini'}>
+                NEXT
             </Form.Button>
+
           </Form>
         </div>
+
         <div className='disclaimer-checkbox' >
           <input type='checkbox' name='disclaimer' onChange={this.handleCheckbox}/>
+
           <label className='disclaimer-text'>
             I agree to receive information from Discovery Comunications in accordance with the following
-            {<a href='https://en.wikipedia.org/wiki/Privacy_policy'
-            rel="noopener noreferrer"
-            target='_blank'>
-            {' Privacy Policy.'}
-            </a>}
+              {<a href='https://en.wikipedia.org/wiki/Privacy_policy' rel="noopener noreferrer" target='_blank'>
+                {' Privacy Policy.'}
+              </a>}
           </label>
         </div>
       </>
