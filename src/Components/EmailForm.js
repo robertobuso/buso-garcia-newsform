@@ -66,7 +66,7 @@ class EmailForm extends Component {
               control='input'
               type='text'
               onChange={event => this.handleChange(event)}/>
-            <Form.Button className='next-button' color='red' size={window.screen.width > 415 ? 'large' : 'mini'}>
+            <Form.Button fluid className='next-button' color='red' size={window.screen.width > 415 ? 'large' : 'mini'}>
               NEXT
             </Form.Button>
           </Form>

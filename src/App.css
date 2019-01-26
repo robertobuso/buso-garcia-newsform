@@ -170,7 +170,7 @@ color: #888888 !important;
     position: absolute;
     left: 13.26%;
     right: 50%;
-    top: 0%;
+    top: 22%;
     bottom: 30.13%;
     font-family: Open Sans;
     font-style: normal;
@@ -203,9 +203,10 @@ color: #888888 !important;
   .form-position {
     position: absolute;
     left: 37.01%;
-    right: 13.26%;
+    right: 10%;
     top: 5%;
     bottom: 63.68%;
+    box-sizing: border-box;
   }
 
   .form-header {
@@ -213,7 +214,7 @@ color: #888888 !important;
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
-    font-size: 3vw;
+    font-size: 5vw;
     color: #94AEBF;
   }
 
@@ -223,18 +224,20 @@ color: #888888 !important;
     right: 62.01%;
     top: 46.31%;
     bottom: 52.08%;
+    box-sizing: border-box;
   }
 
   .email-input {
     position: absolute;
     left: 0%;
-    right: 37%;
+    right: 0%;
     top: 150%;
     bottom: 33%;
     background: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.1;
     border-radius: 5px;
+    box-sizing: border-box;
   }
 
   .email-text {
@@ -250,9 +253,10 @@ color: #888888 !important;
 
   .next-button {
     position: absolute;
-    left: 5%;
-    right: 17.78%;
-    top: 380%;
+    left: 0%;
+    right: 0%;
+    top: 265%;
+    width: fluid;
   }
 
   .full-name-input {
@@ -292,5 +296,21 @@ color: #888888 !important;
       right: 13.26%;
       top: 45%;
       bottom: 63.68%;
+    }
+
+    .disclaimer-checkbox {
+      position: absolute;
+      top: 77%;
+      left: 10%;
+      right: 10%;
+    }
+
+    .disclaimer-text {
+    font-family: Open Sans !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: 10px !important;
+    font-size: 2.65vw !important;
+    color: #888888 !important;
     }
 }
