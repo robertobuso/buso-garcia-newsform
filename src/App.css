@@ -1,4 +1,5 @@
 /* Desktop */
+
 .footer {
   position: absolute;
   left: -0.21%;
@@ -54,7 +55,7 @@
   position: absolute;
   left: 37.01%;
   right: 13.26%;
-  top: 32.3%;
+  top: 25%;
   bottom: 63.68%;
 }
 
@@ -147,6 +148,7 @@ font-size: 1vw !important;
 color: #888888 !important;
 }
 
+
 /* Mobile */
 @media only screen and (max-width: 415px) {
   .footer {
@@ -182,7 +184,7 @@ color: #888888 !important;
 
   .call-to-action-final {
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 15%;
     bottom: 30.13%;
     font-family: Open Sans;
@@ -317,7 +319,7 @@ color: #888888 !important;
 
 /* Tablet Landscape */
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 1024px) {
   .rectangle {
     position: absolute;
     left: 0%;
@@ -343,12 +345,12 @@ color: #888888 !important;
 }
 
 /* Tablet Portrait */
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-height: 1000px) {
   .rectangle {
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 25%;
+    left: -10%;
+    right: -20%;
+    top: 35%;
     bottom: 40%;
     background: #120F23;
   }
@@ -369,7 +371,7 @@ color: #888888 !important;
 }
 
 /* iPad Pro Portrait */
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 1300px) {
   .rectangle {
     position: absolute;
     left: 0%;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import EmailForm from '../Components/EmailForm.js'
 import FullNameForm from '../Components/FullNameForm.js'
 import Congratulations from '../Components/Congratulations.js'
@@ -8,8 +7,13 @@ const CallToAction = props => {
   return (
     <>
     {props.completeForm === true ?
+        window.screen.width > 415 ?
       <div className='call-to-action-final'>
       congratula{<br/>}tions!
+      </div>
+      :
+      <div className='call-to-action-final'>
+      congratulations!
       </div>
       :
       <div className='call-to-action'>
