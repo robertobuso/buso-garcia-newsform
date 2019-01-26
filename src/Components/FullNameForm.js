@@ -22,7 +22,8 @@ class FullNameForm extends Component {
   }
 
   handleSubmit = (event, firstName, secondName) => {
-    if (firstName !== '' && secondName !== '') {
+    debugger
+    if (firstName !== undefined && secondName !== undefined) {
       event.preventDefault()
       event.target.reset()
 
@@ -53,13 +54,13 @@ class FullNameForm extends Component {
           </header>
           <Form.Group widths='equal' className='full-name-input email-text'>
           <Form.Input
-            required name='first name'
+             name='first name'
             placeholder='First Name'
             control='input'
             type='text'
             onChange={event => this.handleFirstNameChange(event)}/>
             <Form.Input
-              required name='last name'
+               name='last name'
               placeholder='Last Name'
               control='input'
               type='text'
