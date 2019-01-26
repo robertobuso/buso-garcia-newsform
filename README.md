@@ -1,4 +1,4 @@
-### Project Moonwalker Coding Exercise
+# Project Moonwalker Coding Exercise
 
 
 ## Client-Side Install Instructions
