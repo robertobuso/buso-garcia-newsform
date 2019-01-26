@@ -11,7 +11,7 @@ class App extends Component {
     }
 
   handleNextClick = (value) => {
-    this.setState({ email: value})
+    this.setState({ email: value}, () => console.log('The valid email is: ', this.state.email))
   }
 
   handleSubmitClick = (name) => {

@@ -29,6 +29,19 @@
   color: #B6FDBF;
 }
 
+.call-to-action-final {
+  position: absolute;
+  left: 9%;
+  top: 15%;
+  bottom: 30.13%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 90px;
+  font-size: 5vw;
+  color: #B6FDBF;
+}
+
 .error-position {
   position: absolute;
   left: 37.01%;
@@ -55,7 +68,7 @@
 
 .group-13 {
   position: absolute;
-  left: 37.15%;
+  left: 50.15%;
   right: 62.01%;
   top: 46.31%;
   bottom: 52.08%;

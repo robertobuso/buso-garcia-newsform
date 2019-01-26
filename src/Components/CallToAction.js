@@ -6,9 +6,16 @@ import Congratulations from '../Components/Congratulations.js'
 const CallToAction = props => {
   return (
     <>
-    <div className='call-to-action'>
-    Join {<br/>}the list
-    </div>
+    {props.completeForm === true ?
+      <div className='call-to-action-final'>
+      congratula{<br/>}tions!
+      </div>
+      :
+      <div className='call-to-action'>
+      Join {<br/>}the list
+      </div>
+    }
+
     {props.email === '' ?
     <EmailForm handleNextClick={props.handleNextClick }
     email={props.email}
