@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Message } from 'semantic-ui-react'
+import { Form, Message, Checkbox } from 'semantic-ui-react'
 
 class EmailForm extends Component {
 
@@ -57,6 +57,15 @@ class EmailForm extends Component {
             </Form.Button>
           </Form>
         </div>
+        <Checkbox
+        className='disclaimer-checkbox'
+        label={<label className='disclaimer-text'>I agree to receive information from Discovery Comunications in accordance with the following
+        {<a href='https://en.wikipedia.org/wiki/Privacy_policy'
+        rel="noopener noreferrer"
+        target='_blank'>
+        Privacy Policy.
+        </a>}
+        </label>}/>
       </>
     )
   }
