@@ -9,7 +9,7 @@ const Congratulations = props => {
         </header>
         <br/>
         <header className='congratulations-body-text'>
-          Look out for the lastest news on your favorite shows.
+          Look out for the latest news on your favorite shows.
         </header>
       </div>
     </>

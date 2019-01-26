@@ -3,7 +3,6 @@ import './App.css';
 import CallToAction from './Components/CallToAction.js'
 
 class App extends Component {
-
   state = {
       email: '',
       fullName: '',

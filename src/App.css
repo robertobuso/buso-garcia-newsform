@@ -132,17 +132,19 @@
 }
 
 .disclaimer-checkbox {
-  top: 85%;
+  position: absolute;
+  top: 80%;
   left: 37%;
+  right: 30%;
 }
 
-::label {
-font-family: Open Sans;
-font-style: normal;
-font-weight: 300;
-line-height: 14px;
-font-size: 12px;
-color: #888888;
+.disclaimer-text {
+font-family: Open Sans !important;
+font-style: normal !important;
+font-weight: 300 !important;
+line-height: 14px !important;
+font-size: 1vw !important;
+color: #888888 !important;
 }
 
 /* Mobile */

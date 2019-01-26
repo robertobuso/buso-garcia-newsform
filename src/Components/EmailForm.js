@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Form, Message, Checkbox } from 'semantic-ui-react'
+import { Form, Message } from 'semantic-ui-react'
 
 class EmailForm extends Component {
 
   state = {
     emailInput: '',
-    error: false
+    error: false,
+    disclaimer: false
   }
 
   handleChange = (e) => {
@@ -14,9 +15,22 @@ class EmailForm extends Component {
     })
   }
 
+  handleCheckbox = () => {
+    this.setState( {
+      disclaimer: !this.state.disclaimer
+    }, () => console.log(this.state.disclaimer))
+  }
+
   handleSubmit = (event, value) => {
+//Uses Regx to validate email by character and structure
     const validEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
 
+//In case the checkbox is required
+    if (this.state.disclaimer === false) {
+      console.log('I wasnt sure whether this was optional or required, so included the code in case we need to require it.')
+    }
+
+//Sends error if email is invalid, proceeds if valid
     if (validEmail) {
       event.preventDefault()
       event.target.reset()
@@ -57,15 +71,17 @@ class EmailForm extends Component {
             </Form.Button>
           </Form>
         </div>
-        <Checkbox
-        className='disclaimer-checkbox'
-        label={<label className='disclaimer-text'>I agree to receive information from Discovery Comunications in accordance with the following
-        {<a href='https://en.wikipedia.org/wiki/Privacy_policy'
-        rel="noopener noreferrer"
-        target='_blank'>
-        Privacy Policy.
-        </a>}
-        </label>}/>
+        <div className='disclaimer-checkbox' >
+          <input type='checkbox' name='disclaimer' onChange={this.handleCheckbox}/>
+          <label className='disclaimer-text'>
+            I agree to receive information from Discovery Comunications in accordance with the following
+            {<a href='https://en.wikipedia.org/wiki/Privacy_policy'
+            rel="noopener noreferrer"
+            target='_blank'>
+            {' Privacy Policy.'}
+            </a>}
+          </label>
+        </div>
       </>
     )
   }
