@@ -1,9 +1,9 @@
 import React from 'react';
 
-const FullNameForm = props => {
+const Congratulations = props => {
   return (
     <>
-      <div className='form-position'>
+      <div className={window.screen.width > 415 ?'form-position' : 'form-position-final'}>
         <header className='form-header'>
           THANK YOU FOR SIGNING UP!
         </header>
@@ -16,4 +16,4 @@ const FullNameForm = props => {
   )
 }
 
-export default FullNameForm;
+export default Congratulations;

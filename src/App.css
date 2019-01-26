@@ -166,13 +166,13 @@
 
   .call-to-action-final {
     position: absolute;
-    left: 9%;
+    left: 40%;
     top: 15%;
     bottom: 30.13%;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    line-height: 90px;
+    line-height: 20px;
     font-size: 5vw;
     color: #B6FDBF;
   }
@@ -258,8 +258,8 @@
   .congratulations-body-text {
       font-family: Open Sans;
       font-style: normal;
-      line-height: 30px;
-      font-size: 1.75vw;
+      line-height: 15px;
+      font-size: 3vw;
       color: #94AEBF;
   }
 
@@ -268,5 +268,13 @@
       left: 0%;
       right: 1%;
       top: 70%;
+    }
+
+    .form-position-final {
+      position: absolute;
+      left: 30%;
+      right: 13.26%;
+      top: 45%;
+      bottom: 63.68%;
     }
 }
