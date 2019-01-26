@@ -176,15 +176,15 @@ color: #888888 !important;
 
   .call-to-action {
     position: absolute;
-    left: 13.26%;
+    left: 5%;
     right: 50%;
     top: 22%;
     bottom: 30.13%;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    line-height: 30px;
-    font-size: 5vw;
+    line-height: 50px;
+    font-size: 8vw;
     color: #B6FDBF;
   }
 
@@ -212,7 +212,7 @@ color: #888888 !important;
     position: absolute;
     left: 37%;
     right: 5%;
-    top: 33%;
+    top: 28%;
   }
 
   .form-position {
@@ -245,7 +245,7 @@ color: #888888 !important;
   .email-input {
     position: absolute;
     left: 0%;
-    right: 0%;
+    right: 10%;
     background: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.1;
@@ -267,7 +267,7 @@ color: #888888 !important;
   .next-button {
     position: absolute;
     left: 0%;
-    right: 0%;
+    right: 10%;
     top: 265%;
     width: fluid;
   }
@@ -276,7 +276,7 @@ color: #888888 !important;
     position: absolute;
     left: 0%;
     right: 20%;
-    top: 150%;
+    top: 175%;
     mix-blend-mode: normal;
     opacity: 0.6;
     border-radius: 5px;
@@ -285,7 +285,7 @@ color: #888888 !important;
   .full-name-button {
     position: absolute;
     left: 43%;
-    top: 295%;
+    top: 320%;
   }
 
   .congratulations-body-text {
