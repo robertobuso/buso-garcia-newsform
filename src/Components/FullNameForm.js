@@ -65,10 +65,10 @@ class FullNameForm extends Component {
               control='input'
               type='text'
               onChange={event => this.handleSecondNameChange(event)}/>
-          <Form.Button color='red' size='huge' className='full-name-button'>
-            SIGN UP
+              </Form.Group>
+          <Form.Button size='large' color='red' className='full-name-button'>
+            {'SIGN UP'}
           </Form.Button>
-        </Form.Group>
         </Form>
         </div>
       </>

@@ -18,14 +18,14 @@
 .call-to-action {
   position: absolute;
   left: 13.26%;
-  right: 67.71%;
+  right: 50%;
   top: 34.7%;
   bottom: 30.13%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   line-height: 131px;
-  font-size: 80px;
+  font-size: 7vw;
   color: #B6FDBF;
 }
 
@@ -49,7 +49,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: 30px;
-  font-size: 22px;
+  font-size: 1.75vw;
   color: #94AEBF;
 }
 
@@ -78,8 +78,8 @@
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  line-height: 32px;
-  font-size: 24px;
+  line-height: normal;
+  font-size: 1.50vw;
   mix-blend-mode: normal;
   opacity: 0.5;
 }
@@ -95,9 +95,8 @@
 .full-name-input {
   position: absolute;
   left: 0%;
-  right: 0%;
+  right: 20%;
   top: 150%;
-  bottom: 33%;
   mix-blend-mode: normal;
   opacity: 0.6;
   border-radius: 5px;
@@ -105,8 +104,7 @@
 
 .full-name-button {
   position: absolute;
-  left: 100%;
-  right: 10%;
-  top: 50%;
-  bottom: 50%;
+  left: 82%;
+  top: 185%;
+  bottom: 45%;
 }
