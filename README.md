@@ -3,4 +3,8 @@
 
 ## Client-Side Install Instructions
 
-Run yarn start
+• Fork and clone this repository.
+
+• Navigate to the root folder of the cloned repo in you terminal and run this command:
+
+• yarn start
