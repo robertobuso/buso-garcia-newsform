@@ -19,13 +19,11 @@ const CallToAction = props => {
 
     {props.email === '' ?
     <EmailForm handleNextClick={props.handleNextClick }
-    email={props.email}
-    fullName={props.fullName}/>
+    email={props.email} />
     :
     props.completeForm === false ?
     <FullNameForm handleSubmitClick={props.handleSubmitClick }
-    email={props.email}
-    fullName={props.fullName}/>
+    email={props.email} />
     :
     <Congratulations />
     }

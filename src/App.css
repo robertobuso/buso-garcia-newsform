@@ -314,3 +314,30 @@ color: #888888 !important;
     color: #888888 !important;
     }
 }
+
+/* Tablet Landscape */
+
+@media only screen and (max-width: 1366px) {
+  .rectangle {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 40%;
+    bottom: 18%;
+    background: #120F23;
+  }
+
+  .call-to-action {
+    position: absolute;
+    left: 13.26%;
+    right: 50%;
+    top: 40%;
+    bottom: 30.13%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 130px;
+    font-size: 7vw;
+    color: #B6FDBF;
+  }
+}

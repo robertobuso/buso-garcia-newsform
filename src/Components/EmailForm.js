@@ -25,7 +25,7 @@ class EmailForm extends Component {
 //Uses Regx to validate email by character and structure
     const validEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
 
-//In case the checkbox is required
+//In case checkbox is required
     if (this.state.disclaimer === false) {
       console.log('I wasnt sure whether this was optional or required, so included the code in case we need to require it.')
     }

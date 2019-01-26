@@ -26,7 +26,6 @@ class App extends Component {
             <CallToAction handleNextClick={this.handleNextClick}
             handleSubmitClick={this.handleSubmitClick}
             email={this.state.email}
-            fullName={this.state.fullName}
             completeForm={this.state.completeForm}/>
         </div>
       </div>
